@@ -19,8 +19,8 @@ export class ContentList{
         return ++ContentList.contentCount;
     }
 
-    contentDescription(myWatch : Content): void{
-        console.log("My favourite watch is ", myWatch.title, "and its of brand ", myWatch.description);
+    contentDescription(myWatch : Content): void{ 
+            console.log("My favourite watch is ", myWatch.title, "and its of brand ", myWatch.description);
 
     }
 }
