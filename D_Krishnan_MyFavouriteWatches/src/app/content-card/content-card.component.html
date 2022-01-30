@@ -1,11 +1,4 @@
-<p>Card Works!</p>
-<div>
-    {{ myWatchList.items[0].description }}
-</div>
-<div>
-    {{ myWatchList.items[1].description }}
-</div>
-    
-<div>
-    {{ myWatchList.items[2].description }}
-</div>
+
+<div [innerHTML] = "myWatchList.contentDescription(myWatchList.items[0])"></div>
+<div [innerHTML] = "myWatchList.contentDescription(myWatchList.items[1])"></div>
+<div [innerHTML] = "myWatchList.contentDescription(myWatchList.items[2])"></div>
