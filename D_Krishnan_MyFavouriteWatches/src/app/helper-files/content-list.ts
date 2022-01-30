@@ -1,4 +1,4 @@
-import { Content } from "src/app/helper-files/content-interface";
+import { Content } from '../helper-files/content-interface';
 
 export class ContentList{
     static contentCount = 0;
