@@ -58,9 +58,7 @@ export class AppComponent {
 
   }
 
-  ImageClick(index : number){
-    console.log(this.watches[index].description, this.watches[index].title)
-  }
+
   
 }
 
