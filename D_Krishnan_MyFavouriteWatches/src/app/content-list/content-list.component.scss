@@ -1,0 +1,22 @@
+
+:host{
+    display: block;
+    width: 800px;
+    border: 1px solid brown;
+    padding: 25px;
+
+    .title{
+        color:#ff0000;
+        text-align: center;
+    }
+    .img{
+       background-size: cover;
+        width: 700px;
+        height: 800px;
+    
+    }
+}
+
+:host.is-first{
+    border: 2px solid black;
+}
