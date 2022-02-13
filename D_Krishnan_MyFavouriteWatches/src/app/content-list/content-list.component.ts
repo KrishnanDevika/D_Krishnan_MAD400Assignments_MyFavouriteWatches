@@ -8,7 +8,7 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentListComponent implements OnInit {
 
-  @Input() watch?: Content;
+ 
   watches: Content[];
   
   constructor() { 
@@ -58,9 +58,7 @@ export class ContentListComponent implements OnInit {
     ];
   }
 
-  ImageClick(index : number){
-    console.log(this.watches[index].id, this.watches[index].title)
-  }
+
 
   ngOnInit(){
 
