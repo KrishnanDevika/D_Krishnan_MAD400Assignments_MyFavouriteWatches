@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
-import { Content } from './helper-files/content-interface';
+import { Component, Input, OnInit } from '@angular/core';
+import { Content } from '../helper-files/content-interface';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-content-list',
+  templateUrl: './content-list.component.html',
+  styleUrls: ['./content-list.component.scss']
 })
-export class AppComponent {
-  title = 'D_Krishnan_MyFavouriteWatches';
-  watches : Content[];
+export class ContentListComponent implements OnInit {
 
-  constructor(){
+  @Input() watch?: Content;
+  watches: Content[];
+  
+  constructor() { 
     this.watches = [{    
       id : 0,
       title : "Fossil",
@@ -55,13 +56,14 @@ export class AppComponent {
         type : "Analog Watch"
       }
     ];
+  }
+
+  ImageClick(index : number){
+    console.log(this.watches[index].id, this.watches[index].title)
+  }
+
+  ngOnInit(){
 
   }
 
-
-  
 }
-
-
-
- 

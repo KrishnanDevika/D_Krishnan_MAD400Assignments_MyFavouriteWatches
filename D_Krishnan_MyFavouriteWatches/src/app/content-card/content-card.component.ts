@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
-import { ContentList } from '../helper-files/content-list';
+
 
 @Component({
   selector: 'app-content-card',
@@ -10,7 +10,7 @@ import { ContentList } from '../helper-files/content-list';
 })
 export class ContentCardComponent implements OnInit {
 
-  myWatchList : ContentList;
+
 
   constructor() { 
     let fossil : Content;
@@ -42,11 +42,6 @@ export class ContentCardComponent implements OnInit {
       imgURL : "https://www.myntra.com/watches/titan/titan-raga-women-white-dial-watch-ne2370ym03/240199/buy",
       type : "Digital Watch"
     }
-    this.myWatchList = new ContentList();
-    this.myWatchList.addItems(fossil);
-    this.myWatchList.addItems(rolex);
-    this.myWatchList.addItems(titan);
-
 
   }
 
