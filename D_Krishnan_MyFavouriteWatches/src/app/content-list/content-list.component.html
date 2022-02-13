@@ -8,7 +8,7 @@
     <div *ngIf = "FetchContent(titleTosearch.value) === 'no'" class="notexists">{{titleTosearch.value}} does not Exists</div>
     <div *ngIf = "FetchContent(titleTosearch.value) === 'yes'" class="exists">{{titleTosearch.value}} Exists</div>
 </div>
- <h2>No Type</h2>
+ <h2>Watches with no types set</h2>
  <app-content-card *ngFor="let item of (watches | watchTypes ); index as i; first as isFirst"
  [watch]="item" [class.is-first]="isFirst" class="notype"></app-content-card>
 
