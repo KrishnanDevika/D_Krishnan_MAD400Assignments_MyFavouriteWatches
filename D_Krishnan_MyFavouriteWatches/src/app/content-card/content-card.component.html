@@ -4,7 +4,6 @@
 <div class="description"><p><strong> Description : </strong><i>{{watch ? watch.description : ''}}</i></p></div>
 <div class="creator"><p><strong>Creator : </strong>{{watch ? watch.creator : ''}}</p></div>
 <div *ngIf="watch ? watch.imgURL : null" ><img [src]="watch ? watch.imgURL : ''" (click)= "ImageClick(watch ? watch.id : 0)"></div>
-<!-- <div *ngIf="watch ? watch.type : null" class="type"><p><strong>Type : {{ watch ? watch.type : '' }}</strong></p></div> -->
 <div *ngIf="watch?.type" class="type"><p><strong>Type : {{  watch?.type }}</strong></p></div>
 
 
