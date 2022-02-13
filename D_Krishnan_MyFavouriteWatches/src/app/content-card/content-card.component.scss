@@ -8,17 +8,28 @@
     text-align: center;
 
     .title{
-        color:#ff0000;
+        color:blue;
         text-align: center;
     }
     img{
        background-size: cover;
-        width: 650px;
-        height: 650px;
+        width: 500px;
+        height: 500px;
     
+    }
+    .type{
+        display: block;
+        font-weight: bold;
+        font-size: 2em;
+        color: purple;
     }
 }
 
-:host.is-first{
-    border: 2px solid black;
-}
+
+
+// :host.is-first{
+//     border: 2px solid black;
+// }
+
+
+

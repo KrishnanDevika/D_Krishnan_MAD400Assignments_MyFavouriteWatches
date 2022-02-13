@@ -1,6 +1,27 @@
+<div>
+    <h1>Watch to search</h1>
+    <input #titleTosearch><br>
+  
+    <br><button (click) = "FetchContent(titleTosearch.value)">search</button><br><br>
 
- <app-content-card *ngFor="let item of watches; index as i; first as isFirst"
- [watch]="item" [class.is-first]="isFirst"></app-content-card>
+    <div *ngIf = "FetchContent(titleTosearch.value) === 'null'"></div>
+    <div *ngIf = "FetchContent(titleTosearch.value) === 'no'" class="notexists">{{titleTosearch.value}} does not Exists</div>
+    <div *ngIf = "FetchContent(titleTosearch.value) === 'yes'" class="exists">{{titleTosearch.value}} Exists</div>
+</div>
+ <h2>No Type</h2>
+ <app-content-card *ngFor="let item of (watches | watchTypes ); index as i; first as isFirst"
+ [watch]="item" [class.is-first]="isFirst" class="notype"></app-content-card>
+
+ <h2>Analog Watches</h2>
+ <app-content-card *ngFor="let item of (watches | watchTypes: 'Analog Watch'); index as i; first as isFirst"
+ [watch]="item" [class.is-first]="isFirst" class="typeAnalog"></app-content-card>
+<h2>Digital Watches</h2>
+ <app-content-card *ngFor="let item of (watches | watchTypes: 'Digital Watch'); index as i; first as isFirst"
+ [watch]="item" [class.is-first]="isFirst" class="typeDigital"></app-content-card>
+
+<h2>Smart Watches</h2>
+ <app-content-card *ngFor="let item of (watches | watchTypes: 'Smart Watch'); index as i; first as isFirst"
+ [watch]="item" [class.is-first]="isFirst" class="typeSmart"></app-content-card>
 
   
   

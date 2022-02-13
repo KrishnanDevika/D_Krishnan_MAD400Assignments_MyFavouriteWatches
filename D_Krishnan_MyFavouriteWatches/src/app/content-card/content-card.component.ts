@@ -23,4 +23,9 @@ export class ContentCardComponent implements OnInit {
     console.log(this.watch?.id, this.watch?.title)
   }
 
+
+  FetchContent(titleTosearch : string){
+      
+  }
+
 }
