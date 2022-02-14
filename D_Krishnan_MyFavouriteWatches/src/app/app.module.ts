@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { WatchTypesPipe } from './watch-types.pipe';
+import { HoverAffectDirective } from './hover-affect.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentCardComponent,
     ContentListComponent,
-    WatchTypesPipe
+    WatchTypesPipe,
+    HoverAffectDirective
   ],
   imports: [
     BrowserModule

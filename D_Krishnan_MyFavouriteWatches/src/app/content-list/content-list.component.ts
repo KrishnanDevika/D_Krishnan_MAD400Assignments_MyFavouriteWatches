@@ -25,20 +25,23 @@ export class ContentListComponent implements OnInit {
         description : "A Stainless Steel round shaped dial with clock traditional look",
         creator : "Rolex Analog",
         imgURL : "https://upload.wikimedia.org/wikipedia/commons/7/70/Rolex_deepsea.jpg",
-        type : "Analog Watch"
+        type : "Analog Watch",
+        tags: ["Silver" ,"Round"]
       },{
         id : 2,
         title : "Titan",
         description : "A round shaped dial with Steel strap watch nice to wear",
-        imgURL :"https://upload.wikimedia.org/wikipedia/commons/8/80/Casio_Waveceptor_WV-200DE.jpg",
+        imgURL :"https://upload.wikimedia.org/wikipedia/commons/7/7c/Timex_T5E901_Ironman_Triathlon_30_Lap_FLIX.jpg",
         creator : "Titan Digital",
-        type: "Digital Watch"
+        type: "Digital Watch",
+        tags:["Round", "Black"]
       },{
         id : 3,
         title : "Citizen",
         description : "A Stainless Steel square shaped dial with clock digital best fit for all clothes",
         creator : "DigiCiti",
-        type : "Digital Watch"
+        imgURL: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Citizen_Attesa_Eco-Drive_ATV53-3023_02.JPG",
+        type : "Analog Watch"
       },{
         id : 4,
         title : "FastTrack",
@@ -50,12 +53,14 @@ export class ContentListComponent implements OnInit {
         title : "Casio",
         description : "A Gold with round shaped dial with clock analog traditional look",
         creator : "WatchForTrends",
-        type : "Analog Watch"
+        imgURL: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Casio_OCEANUS_OCW-S1350PC-1AJR_01.JPG",
+      
       },{
         id : 6,
         title : "Fossil",
         description : "A Black Stainless Steel watch with round shaped dial fit perfectly with classy quality",
         creator : "FossileGropus",
+        type: "Analog Watch"
      
       }
     ];
