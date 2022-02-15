@@ -18,7 +18,9 @@ export class ContentListComponent implements OnInit {
       title : "Fossil",
       description : "A nice Rose Gold Stainless Steel watch with round dial",
       creator : "Fossil Smart Watch",
-      type : "Smart Watch"
+      type : "Smart Watch",
+      tags: ["Round", "Rose Gold"]
+
       },{
         id : 1,
         title : "Rolex",
@@ -41,12 +43,14 @@ export class ContentListComponent implements OnInit {
         description : "A Stainless Steel square shaped dial with clock digital best fit for all clothes",
         creator : "DigiCiti",
         imgURL: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Citizen_Attesa_Eco-Drive_ATV53-3023_02.JPG",
-        type : "Analog Watch"
+        type : "Analog Watch",
+        tags: ["Steel"]
       },{
         id : 4,
         title : "FastTrack",
         description : "A leather square shaped dial with clock smart classy look",
         creator : "FastTrack Digital",
+        tags:["Leather", "Square"]
         
       },{
         id : 5,

@@ -7,6 +7,26 @@
     padding: 25px;
     margin: 10px auto;
     text-align: center;
+    
+    &.notype{
+        display: block;
+        background-color: palegreen;
+    }
+    
+    &.typeSmart{
+        display: block;
+        background-color: orchid;
+    }
+    
+    &.typeAnalog{
+        display: block;
+        background-color: paleturquoise;
+    }
+    
+    &.typeDigital{
+        display: block;
+        background-color: burlywood;
+    }
 
     .title{
         color:blue;
@@ -40,6 +60,8 @@
         margin: 5px;
       }
 }
+
+
 
 // :host.is-first{
 //     border: 2px solid black;
