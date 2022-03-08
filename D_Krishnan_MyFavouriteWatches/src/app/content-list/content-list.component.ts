@@ -88,4 +88,13 @@ export class ContentListComponent implements OnInit {
 
   }
 
+  //update the parent element
+  addWatchToList(newWatchEvent : Content): void{
+    this.watches.push(newWatchEvent);
+
+    //clone the array for the pipe to work
+    this.watches = [...this.watches];
+
+  }
+
 }

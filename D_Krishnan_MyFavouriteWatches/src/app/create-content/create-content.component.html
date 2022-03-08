@@ -1,0 +1,20 @@
+
+<div>
+    ID*: <input [(ngModel)]= "idValue"><br><br>
+    Title*: <input [(ngModel)] = "title"><br><br>
+    Description*: <input [(ngModel)] = "description"><br><br>
+    Creator*: <input [(ngModel)] = "creator"><br><br>
+    Image URL: <input [(ngModel)] = "imgUrl"><br><br>
+    Type: <input [(ngModel)] = "type"><br><br>
+    Tags: <input [(ngModel)] ="tags"><br><br>
+</div>
+
+<div>
+    <button (click)="addContent()">Add Content</button>
+</div>
+
+<br><input type = "text" size = "50" class = "error" [(ngModel)] = "failMessage" >
+
+    <!-- <button (click)="addContent(idValue, title, description.value, creator.value, imgUrl.value, type.value, tags.value)">Add Content</button> -->
+
+
