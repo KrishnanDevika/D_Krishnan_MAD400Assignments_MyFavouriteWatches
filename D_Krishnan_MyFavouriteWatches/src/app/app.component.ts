@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Content } from './helper-files/content-interface';
+import { WatchServiceService } from './watch-service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'D_Krishnan_MyFavouriteWatches';
 
-  constructor(){
+  newWatchList: Content[];
+  
+  constructor(private watchService : WatchServiceService) {
+    this.newWatchList = [];
+   }
+  ngOnInit(): void{
+
+  }
+
+  getIndividualWatch(index : string){
+    let id = parseInt(index);
+    this.watchService.getIndividualContent(id).subscribe(newWatch =>{
+      this.newWatchList.push(newWatch);
+    });
   }
 
   

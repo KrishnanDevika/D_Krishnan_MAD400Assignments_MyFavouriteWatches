@@ -1,12 +1,13 @@
 {
   "name": "d-krishnan-my-favourite-watches",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "generate": "ng generate",
     "generatecomponent": "ng generate component",
     "generatedirective": "ng g directive",
     "generatepipe": " ng g pipe"

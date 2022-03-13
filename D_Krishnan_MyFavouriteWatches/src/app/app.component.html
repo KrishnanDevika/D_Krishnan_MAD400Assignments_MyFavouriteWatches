@@ -1,1 +1,24 @@
+<div>
+    Enter the watch Id: <input #watchId><br>
+    <br><button (click) = "getIndividualWatch(watchId.value)">get Watch</button><br><br>
+</div>
+
+
+<div *ngFor="let item of newWatchList; index as i;">
+<app-messages></app-messages><br>
+<div class  = "newContent" *ngIf="newWatchList[i]">
+    
+<div class="title" ><h1> {{newWatchList[i].title}}</h1></div>
+<div *ngIf="newWatchList[i]?.description" class="description"><p><strong> Description : </strong><i>{{newWatchList[i].description}}</i></p></div>
+<div *ngIf="newWatchList[i]?.creator" class="creator"><p><strong>Creator : </strong>{{newWatchList[i].creator}}</p></div>
+
+<div *ngIf="newWatchList[i]?.imgURL" ><img [src]="newWatchList[i].imgURL"></div>
+
+<div *ngIf="newWatchList[i]?.type" class="type" appHoverAffect [element] = "'type'">Type : {{  newWatchList[i].type }}</div>
+
+<div *ngIf="newWatchList[i]?.tags" class="tags">Tags: 
+    <span class="tag" *ngFor="let tag of newWatchList[i]?.tags" appHoverAffect [element] = "'tag'">{{ tag }}</span>
+</div>
+</div>
+</div>
 <app-content-list></app-content-list>
