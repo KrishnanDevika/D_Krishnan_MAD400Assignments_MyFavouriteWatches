@@ -1,10 +1,11 @@
 
+<div *ngIf = "watch">
 
-<div class="title" ><h1> {{watch ? watch.title : ''}}</h1></div>
-<div class="description"><p><strong> Description : </strong><i>{{watch ? watch.description : ''}}</i></p></div>
-<div class="creator"><p><strong>Creator : </strong>{{watch ? watch.creator : ''}}</p></div>
+<div class="title" ><h1> {{ watch.title }}</h1></div>
+<div class="description"><p><strong> Description : </strong><i>{{ watch.description }}</i></p></div>
+<div class="creator"><p><strong>Creator : </strong>{{ watch.creator }}</p></div>
 
-<div *ngIf="watch?.imgURL" ><img [src]="watch?.imgURL"(click)= "ImageClick(watch ? watch.id : 0)"></div>
+<div *ngIf="watch?.imgURL" ><img [src]="watch?.imgURL"></div>
 <div *ngIf="!watch?.imgURL" ><img src= "https://upload.wikimedia.org/wikipedia/commons/a/a5/Acta_Eruditorum_-_II_orologi%2C_1737_%E2%80%93_BEIC_13458392.jpg" /></div>
 
 <div *ngIf="watch?.type" class="type" appHoverAffect [element] = "'type'">Type : {{  watch?.type }}</div>
@@ -12,6 +13,7 @@
 <div *ngIf="watch?.tags" class="tags">Tags: 
     <span class="tag" *ngFor="let tag of watch?.tags" appHoverAffect [element] = "'tag'">{{ tag }}</span>
   </div>
+</div>
 
 
 

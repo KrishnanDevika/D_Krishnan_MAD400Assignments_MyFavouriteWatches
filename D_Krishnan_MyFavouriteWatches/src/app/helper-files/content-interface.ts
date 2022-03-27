@@ -1,5 +1,5 @@
 export interface Content{
-    id : number;
+    readonly id? : number;
     title : string;
     description : string;
     creator : string;

@@ -1,7 +1,21 @@
-.messages{
-    display: block;
-}
-.message{
-    color: blueviolet;
-    font-size: 2em;
-}
+:host > div {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    width: 150px;
+    height: auto;
+    border: 1px solid #000;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 10px;
+  
+    h2 {
+      margin: 0 0 8px 0;
+    }
+    button {
+      display: block;
+      margin: 8px 0;
+      width: 100%;
+    }
+  }
+  

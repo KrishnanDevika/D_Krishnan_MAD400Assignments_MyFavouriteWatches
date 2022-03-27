@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Content } from './helper-files/content-interface';
-import { WatchServiceService } from './watch-service.service';
+import { WatchServiceService } from './services/watch-service.service';
+
+
 
 @Component({
   selector: 'app-root',

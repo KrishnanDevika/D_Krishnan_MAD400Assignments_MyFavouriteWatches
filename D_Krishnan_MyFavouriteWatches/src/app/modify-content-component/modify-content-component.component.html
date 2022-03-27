@@ -1,0 +1,13 @@
+<h2>Store and retrieve Content using Simulated Server</h2>
+<div>
+    ID: <input [(ngModel)]= "idValue"><br><br>
+    Title: <input [(ngModel)] = "title"><br><br>
+    Description: <input [(ngModel)] = "description"><br><br>
+    Creator: <input [(ngModel)] = "creator"><br><br>
+    Image URL: <input [(ngModel)] = "imgUrl"><br><br>
+    Type: <input [(ngModel)] = "type"><br><br>
+    Tags: <input [(ngModel)] ="tags"><br><br>
+</div>
+<div>
+    <button (click)="addWatch()">{{idValue ? 'Update Content' : 'Add Content'}}</button>
+</div>
