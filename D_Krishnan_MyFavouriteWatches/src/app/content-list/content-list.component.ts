@@ -82,7 +82,7 @@ export class ContentListComponent implements OnInit {
 
   if(isValidID == false)
   {
-    this.messageService.add(`A Watch with that id not exists"`);
+    this.messageService.add(`A Watch with that id not exists`);
     console.log("Watch with that id not exists");
   }
     
