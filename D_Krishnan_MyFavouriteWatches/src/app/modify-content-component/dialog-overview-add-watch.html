@@ -1,0 +1,35 @@
+<h1 mat-dialog-title>Add watch</h1>
+<div mat-dialog-content>
+    <mat-form-field appearance = "fill">
+        <mat-label> ID </mat-label>
+        <input [disabled]= "true" matInput [(ngModel)]= "idValue">
+    </mat-form-field><br>
+    <mat-form-field appearance = "fill">
+        <mat-label> Title </mat-label>
+        <input matInput [(ngModel)] = "title">
+    </mat-form-field><br>
+    <mat-form-field appearance = "fill">
+        <mat-label> Description </mat-label>
+        <input matInput [(ngModel)] = "description">
+    </mat-form-field><br>
+    <mat-form-field appearance = "fill">
+        <mat-label> Creator </mat-label>
+        <input matInput [(ngModel)] = "creator">
+    </mat-form-field><br>
+    <mat-form-field appearance = "fill">
+        <mat-label> Image URL </mat-label>
+        <input matInput [(ngModel)]= "imgUrl">
+    </mat-form-field><br>
+    <mat-form-field appearance = "fill">
+        <mat-label> Type </mat-label>
+        <input matInput [(ngModel)]= "type">
+    </mat-form-field><br>
+    <mat-form-field appearance = "fill">
+        <mat-label> Tags </mat-label>
+        <input matInput [(ngModel)]= "tags">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="addNewWatch()" cdkFocusInitial>Add</button>
+</div>

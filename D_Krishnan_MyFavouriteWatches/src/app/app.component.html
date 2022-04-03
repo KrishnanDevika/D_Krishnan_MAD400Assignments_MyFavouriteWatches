@@ -1,6 +1,10 @@
 <div>
-    Enter the watch Id: <input #watchId><br>
-    <br><button (click) = "getIndividualWatch(watchId.value)">get Watch</button><br><br>
+    <mat-form-field appearance = "fill">
+        <mat-label> Enter the watch Id </mat-label>
+        <input matInput #watchId>
+    </mat-form-field>
+
+    <br><button mat-raised-button color="accent" (click) = "getIndividualWatch(watchId.value)">get Watch</button><br><br>
 </div>
 
 

@@ -2,11 +2,12 @@
 
 :host{
     display: block;
-    width: 1200px;
+    width: 600px;
     border: 1px solid brown;
-    padding: 25px;
+    padding: 40px;
+    font-size: 18px;
     margin: 10px auto;
-    text-align: center;
+   text-align: center;
     
     &.notype{
         display: block;
@@ -27,22 +28,19 @@
         display: block;
         background-color: burlywood;
     }
+   
 
-    .title{
-        color:blue;
-        text-align: center;
-    }
     img{
        background-size: cover;
         width: 500px;
         height: 500px;
-    
+        margin-bottom: 20px;
     }
     .type{
         display: block;
         font-weight: bold;
         font-size: 2em;
-        margin: 10px;
+        margin-bottom: 30px;
         color: purple;
     }
 
@@ -59,13 +57,10 @@
         border-radius:8px;
         margin: 5px;
       }
+    
 }
 
 
-
-// :host.is-first{
-//     border: 2px solid black;
-// }
 
 
 

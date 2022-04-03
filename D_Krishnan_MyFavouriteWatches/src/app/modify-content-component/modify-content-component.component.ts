@@ -1,5 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-modify-content-component',
@@ -21,7 +22,7 @@ export class ModifyContentComponentComponent implements OnInit {
     type : string = '';
     tags : string = '';
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -84,4 +85,64 @@ export class ModifyContentComponentComponent implements OnInit {
 
   }
 
-}
+  openDialog(): void{
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialog);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+      if(result != null)
+      this.newWatchEvent.emit(result)
+    });
+
+  
+  }
+  }
+
+  @Component({
+    selector: 'dialog-overview-add-watch',
+    templateUrl: 'dialog-overview-add-watch.html',
+  })
+  export class DialogOverviewExampleDialog {
+    @Output() newWatchEvent: EventEmitter<Content> = new EventEmitter<Content>();
+    constructor(
+      public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+     
+    ) {}
+    data?: Content;
+    idValue : string = "";
+    title : string = '';
+    description: string = '';
+    creator : string = '';
+    imgUrl : string = '';
+    type : string = '';
+    tags : string = '';
+    
+
+    addNewWatch(): void {
+      let tag: any;
+      if(this.tags == ''){
+        tag = '';
+  
+      }else{
+          tag = this.tags.split(",");
+      }
+   
+      this.data = {
+        title: this.title,
+        description : this.description,
+        creator : this.creator,
+        imgURL: this.imgUrl,
+        type: this.type,
+        tags: tag
+      }; 
+      console.log(this.data)
+    
+      this.dialogRef.close(this.data)
+    }
+  
+    onNoClick(): void {
+     this.dialogRef.close();
+    }
+  }
+
+

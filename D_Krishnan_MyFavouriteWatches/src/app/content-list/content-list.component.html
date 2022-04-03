@@ -3,9 +3,13 @@
 
 <div>
     <h1>Watch to search</h1>
-    <input #titleTosearch><br>
+    <mat-form-field appearance = "fill">
+        <mat-label> Enter Watch Name </mat-label>
+        <input matInput  #titleTosearch>
+    </mat-form-field>
   
-    <br><button (click) = "FetchContent(titleTosearch.value)">search</button><br><br>
+  
+    <br><button  mat-raised-button color="accent" (click) = "FetchContent(titleTosearch.value)">search</button><br><br>
 
     <div *ngIf = "FetchContent(titleTosearch.value) === 'null'"></div>
     <div *ngIf = "FetchContent(titleTosearch.value) === 'no'" class="notexists">{{titleTosearch.value}} does not Exists</div>

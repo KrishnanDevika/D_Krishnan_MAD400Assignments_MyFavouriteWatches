@@ -8,12 +8,18 @@ import { WatchTypesPipe } from './watch-types.pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
 import { MessagesComponent } from './messages/messages.component';
 import { ModifyContentComponentComponent } from './modify-content-component/modify-content-component.component';
+import {DialogOverviewExampleDialog} from './modify-content-component/modify-content-component.component';
 import { HttpClientModule } from "@angular/common/http"; 
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider'
 
 @NgModule({
   declarations: [
@@ -23,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     WatchTypesPipe,
     HoverAffectDirective,
     MessagesComponent,
-    ModifyContentComponentComponent
+    ModifyContentComponentComponent,
+    DialogOverviewExampleDialog
   ],
   imports: [
     BrowserModule,
@@ -32,6 +39,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
     dataEncapsulation: false,
     delay: 500, }),
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatCardModule,
+    MatDividerModule,
     BrowserAnimationsModule
   ],
   providers: [],
