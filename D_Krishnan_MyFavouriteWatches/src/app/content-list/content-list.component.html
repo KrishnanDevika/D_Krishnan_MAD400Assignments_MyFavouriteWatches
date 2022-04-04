@@ -1,6 +1,8 @@
 <app-modify-content-component (newWatchEvent)= "addWatchToList($event)" (updateWatchEvent)="updateWatchInList($event)">
 </app-modify-content-component>
 
+<mat-divider class = "matdivider"></mat-divider>
+
 <div>
     <h1>Watch to search</h1>
     <mat-form-field appearance = "fill">
@@ -15,16 +17,21 @@
     <div *ngIf = "FetchContent(titleTosearch.value) === 'no'" class="notexists">{{titleTosearch.value}} does not Exists</div>
     <div *ngIf = "FetchContent(titleTosearch.value) === 'yes'" class="exists">{{titleTosearch.value}} Exists</div>
 </div>
+<mat-divider class = "matdivider"></mat-divider>
  <h2>Watches with no types set</h2>
  <app-content-card *ngFor="let item of (watches | watchTypes ); index as i; first as isFirst"
  [watch]="item" [class.is-first]="isFirst" class="notype"></app-content-card>
+ <mat-divider class = "matdivider" ></mat-divider>
 
  <h2>Analog Watches</h2>
  <app-content-card *ngFor="let item of (watches | watchTypes: 'Analog Watch'); index as i; first as isFirst"
  [watch]="item" [class.is-first]="isFirst" class="typeAnalog"></app-content-card>
+ <mat-divider class = "matdivider"></mat-divider>
+
 <h2>Digital Watches</h2>
  <app-content-card *ngFor="let item of (watches | watchTypes: 'Digital Watch'); index as i; first as isFirst"
  [watch]="item" [class.is-first]="isFirst" class="typeDigital"></app-content-card>
+ <mat-divider class = "matdivider"></mat-divider>
 
 <h2>Smart Watches</h2>
  <app-content-card *ngFor="let item of (watches | watchTypes: 'Smart Watch'); index as i; first as isFirst"

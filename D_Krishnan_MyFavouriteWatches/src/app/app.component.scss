@@ -4,6 +4,14 @@
     box-shadow: 10px  10px grey;
     margin-bottom: 20px;
 }
+h1{
+    font-weight: bold;
+    font-size: 28px;
+}
+.matdivider{
+    border-top-color: green;
+    border-top-width: 5px;
+}
 :host{
     display: block;
     width: 1200px;

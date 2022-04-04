@@ -10,8 +10,13 @@
         font-weight: bold;
         font-size: large;
     }
-h2{
+    .matdivider{
+        border-top-color: green;
+        border-top-width: 5px;
+    }
+h2,h1{
+    margin: 20px;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 26px;
     font-weight: bold;
 }

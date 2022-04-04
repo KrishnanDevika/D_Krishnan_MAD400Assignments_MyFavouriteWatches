@@ -1,4 +1,5 @@
 <div>
+    <h1>Get Individual Watch</h1>
     <mat-form-field appearance = "fill">
         <mat-label> Enter the watch Id </mat-label>
         <input matInput #watchId>
@@ -7,15 +8,21 @@
     <br><button mat-raised-button color="accent" (click) = "getIndividualWatch(watchId.value)">get Watch</button><br><br>
 </div>
 
-
 <div *ngFor="let item of newWatchList; index as i;">
 <app-messages></app-messages><br>
 <div class  = "newContent" *ngIf="newWatchList[i]">
-    
-<div class="title" ><h1> {{newWatchList[i].title}}</h1></div>
-<div *ngIf="newWatchList[i]?.description" class="description"><p><strong> Description : </strong><i>{{newWatchList[i].description}}</i></p></div>
-<div *ngIf="newWatchList[i]?.creator" class="creator"><p><strong>Creator : </strong>{{newWatchList[i].creator}}</p></div>
-
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+          <div class="title" ><h1><strong>Title : </strong>{{ newWatchList[i].title}}</h1></div>
+        </mat-card-title> 
+        <mat-card-subtitle>
+          <div class="creator"><p><strong>Creator : </strong>{{ newWatchList[i].creator }}</p></div>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="description"><p><strong> Description : </strong>{{ newWatchList[i].description}}</p></div>
+      </mat-card-content>
 <div *ngIf="newWatchList[i]?.imgURL" ><img [src]="newWatchList[i].imgURL"></div>
 
 <div *ngIf="newWatchList[i]?.type" class="type" appHoverAffect [element] = "'type'">Type : {{  newWatchList[i].type }}</div>
@@ -23,8 +30,10 @@
 <div *ngIf="newWatchList[i]?.tags" class="tags">Tags: 
     <span class="tag" *ngFor="let tag of newWatchList[i]?.tags" appHoverAffect [element] = "'tag'">{{ tag }}</span>
 </div>
+</mat-card>  
 </div>
 </div>
+<mat-divider class = "matdivider"></mat-divider>
 <app-content-list></app-content-list>
 <app-messages></app-messages>
 
