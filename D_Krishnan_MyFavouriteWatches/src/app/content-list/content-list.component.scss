@@ -1,4 +1,8 @@
-
+.search{
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
 .exists{
         color: green;
         font-weight: bold;
@@ -10,10 +14,10 @@
         font-weight: bold;
         font-size: large;
     }
-    .matdivider{
-        border-top-color: green;
-        border-top-width: 5px;
-    }
+.matdivider{
+    border-top-color: green;
+    border-top-width: 5px;
+}
 h2,h1{
     margin: 20px;
     text-align: center;

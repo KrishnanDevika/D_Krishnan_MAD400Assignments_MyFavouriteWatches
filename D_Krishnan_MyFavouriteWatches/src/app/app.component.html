@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <h1>Get Individual Watch</h1>
     <mat-form-field appearance = "fill">
         <mat-label> Enter the watch Id </mat-label>
@@ -34,6 +34,11 @@
 </div>
 </div>
 <mat-divider class = "matdivider"></mat-divider>
-<app-content-list></app-content-list>
+<app-content-list></app-content-list> -->
+<a routerLink="content" routerLinkActive="active-link">Content List</a><br />
+ <a routerLink="pagewillnotbefound" routerLinkActive="active-link">
+   Invalid page link
+ </a><br />
+<router-outlet></router-outlet>
 <app-messages></app-messages>
 

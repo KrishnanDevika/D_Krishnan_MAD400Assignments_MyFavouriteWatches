@@ -33,15 +33,17 @@ export class WatchServiceService {
   }
 
   getIndividualContent(index: number): Observable<Content>{
-    let newWatch : any ;
-    if(index > FAVOURITE_WATCHES.length){
-      this.messageService.add(`Entered Id ${index} was not in the list. Out of index`);
-      return of(newWatch);
+    console.log("Retrieving OBSERVABLE content item");
+    return this.http.get<Content>("api/content/" + index);
+    // let newWatch : any ;
+    // if(index > FAVOURITE_WATCHES.length){
+    //   this.messageService.add(`Entered Id ${index} was not in the list. Out of index`);
+    //   return of(newWatch);
       
-    }else{
-    this.messageService.add(`Watch from WatchList at id: ${index} Loaded!`);
-    return of(FAVOURITE_WATCHES[index]);
-    }
+    // }else{
+    // this.messageService.add(`Watch from WatchList at id: ${index} Loaded!`);
+    // return of(FAVOURITE_WATCHES[index]);
+    // }
   
 
   }

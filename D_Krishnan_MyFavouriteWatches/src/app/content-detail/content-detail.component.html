@@ -1,0 +1,31 @@
+
+<mat-card><div *ngIf = "watch">
+    <mat-card-header>
+      <mat-card-title>
+        <div class="title" ><h1><strong>Title : </strong>{{ watch.title }}</h1></div>
+      </mat-card-title> 
+      <mat-card-subtitle>
+        <div class="creator"><p><strong>Creator : </strong>{{ watch.creator }}</p></div>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="description"><p><strong> Description : </strong>{{ watch.description }}</p></div>
+    </mat-card-content>
+    
+      <div *ngIf="watch?.imgURL" ><img [src]="watch?.imgURL"></div>
+      <div *ngIf="!watch?.imgURL" ><img src= "https://upload.wikimedia.org/wikipedia/commons/a/a5/Acta_Eruditorum_-_II_orologi%2C_1737_%E2%80%93_BEIC_13458392.jpg" /></div>
+      
+    <div *ngIf="watch?.type" class="type" appHoverAffect [element] = "'type'">Type : {{  watch?.type }}</div>
+    <mat-divider inset></mat-divider>
+    <div *ngIf="watch?.tags" class="tags">Tags: 
+        <span class="tag" *ngFor="let tag of watch?.tags" appHoverAffect [element] = "'tag'">{{ tag }}</span>
+      </div>
+    
+    </div>
+    </mat-card>
+    
+    
+    
+    
+    
+    

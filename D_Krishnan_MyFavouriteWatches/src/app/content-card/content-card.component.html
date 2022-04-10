@@ -8,9 +8,9 @@
     <div class="creator"><p><strong>Creator : </strong>{{ watch.creator }}</p></div>
   </mat-card-subtitle>
 </mat-card-header>
-<mat-card-content>
+<!-- <mat-card-content>
   <div class="description"><p><strong> Description : </strong>{{ watch.description }}</p></div>
-</mat-card-content>
+</mat-card-content> -->
 
   <div *ngIf="watch?.imgURL" ><img [src]="watch?.imgURL"></div>
   <div *ngIf="!watch?.imgURL" ><img src= "https://upload.wikimedia.org/wikipedia/commons/a/a5/Acta_Eruditorum_-_II_orologi%2C_1737_%E2%80%93_BEIC_13458392.jpg" /></div>
@@ -22,6 +22,10 @@
   </div>
 
 </div>
+
+<a [routerLink]="['/content', watch?.id]" routerLinkActive="active">
+  Content Details
+  </a>
 
 </mat-card>
 

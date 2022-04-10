@@ -20,6 +20,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider'
+import { AppRoutingModule } from './app-routing.module';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -30,9 +33,12 @@ import {MatDividerModule} from '@angular/material/divider'
     HoverAffectDirective,
     MessagesComponent,
     ModifyContentComponentComponent,
-    DialogOverviewExampleDialog
+    DialogOverviewExampleDialog,
+    ContentDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
@@ -46,6 +52,7 @@ import {MatDividerModule} from '@angular/material/divider'
     MatCardModule,
     MatDividerModule,
     BrowserAnimationsModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

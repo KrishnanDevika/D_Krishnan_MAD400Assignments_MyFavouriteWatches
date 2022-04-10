@@ -1,0 +1,66 @@
+
+
+:host{
+    display: block;
+    width: 600px;
+    border: 1px solid brown;
+    padding: 40px;
+    font-size: 18px;
+    margin: 10px auto;
+   text-align: center;
+    
+    &.notype{
+        display: block;
+        background-color: palegreen;
+    }
+    
+    &.typeSmart{
+        display: block;
+        background-color: orchid;
+    }
+    
+    &.typeAnalog{
+        display: block;
+        background-color: paleturquoise;
+    }
+    
+    &.typeDigital{
+        display: block;
+        background-color: burlywood;
+    }
+   
+
+    img{
+       background-size: cover;
+        width: 500px;
+        height: 500px;
+        margin-bottom: 20px;
+    }
+    .type{
+        display: block;
+        font-weight: bold;
+        font-size: 2em;
+        margin-bottom: 30px;
+        color: purple;
+    }
+
+    .tags{
+        color: black;
+        padding: 10px;
+        margin: 16px 0;
+        font-size: 1.5em;
+
+      }
+      .tag{
+        padding: 8px;
+        background-color: #747bdb;
+        border-radius:8px;
+        margin: 5px;
+      }
+    
+}
+
+
+
+
+
