@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Content } from './helper-files/content-interface';
+import { LogUpdateService } from './log-update.service';
 import { WatchServiceService } from './services/watch-service.service';
 
 
@@ -14,11 +15,11 @@ export class AppComponent {
 
   newWatchList: Content[];
   
-  constructor(private watchService : WatchServiceService) {
+  constructor(private watchService : WatchServiceService, private logService: LogUpdateService) {
     this.newWatchList = [];
    }
   ngOnInit(): void{
-
+    this.logService.init();
   }
 
   getIndividualWatch(index : string){
