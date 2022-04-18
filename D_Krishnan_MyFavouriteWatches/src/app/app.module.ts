@@ -25,6 +25,7 @@ import { ContentDetailComponent } from './content-detail/content-detail.componen
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { SnackBarComponent } from './snack-bar/snack-bar.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { environment } from '../environments/environment';
     ModifyContentComponentComponent,
     DialogOverviewExampleDialog,
     ContentDetailComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SnackBarComponent
   ],
   imports: [
     AppRoutingModule,
