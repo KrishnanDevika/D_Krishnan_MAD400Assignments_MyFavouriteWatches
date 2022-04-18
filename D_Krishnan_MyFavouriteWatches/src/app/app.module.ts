@@ -25,7 +25,8 @@ import { ContentDetailComponent } from './content-detail/content-detail.componen
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { SnackBarComponent } from './snack-bar/snack-bar.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -38,8 +39,7 @@ import { SnackBarComponent } from './snack-bar/snack-bar.component';
     ModifyContentComponentComponent,
     DialogOverviewExampleDialog,
     ContentDetailComponent,
-    PageNotFoundComponent,
-    SnackBarComponent
+    PageNotFoundComponent
   ],
   imports: [
     AppRoutingModule,
@@ -56,6 +56,7 @@ import { SnackBarComponent } from './snack-bar/snack-bar.component';
     MatCardModule,
     MatDividerModule,
     BrowserAnimationsModule,
+    MatSnackBarModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable

@@ -11,7 +11,7 @@ import { WatchServiceService } from './services/watch-service.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'D_Krishnan_MyFavouriteWatches';
+  title = 'D_Krishnan_MyFavouriteWatches Final Copleted';
 
   newWatchList: Content[];
   
